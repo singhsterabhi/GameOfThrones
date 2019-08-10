@@ -1,8 +1,8 @@
 import axios from "axios";
-
+// https://cors-singhster.herokuapp.com/
 const instance = axios.create({
   baseURL:
-    "https://cors-singhster.herokuapp.com/https://anapioficeandfire.com/api/"
+    "https://anapioficeandfire.com/api/"
 });
 
 export default instance;

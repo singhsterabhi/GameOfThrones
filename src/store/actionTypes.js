@@ -1,2 +1,5 @@
 export const GET_BOOKS = "GET_BOOKS";
 export const SET_BOOKS = "SET_BOOKS";
+
+export const GET_MAIN_CHARACTERS = "GET_MAIN_CHARACTERS";
+export const SET_MAIN_CHARACTERS = "SET_MAIN_CHARACTERS";

@@ -1,7 +1,8 @@
 import * as actionTypes from "./actionTypes";
 
 const initialState = {
-  books: null
+  books: null,
+  characters: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -10,6 +11,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         books: action.books
+      };
+    case actionTypes.SET_MAIN_CHARACTERS:
+      return {
+        ...state,
+        characters: [...state.characters, action.main]
       };
     default:
       return state;
