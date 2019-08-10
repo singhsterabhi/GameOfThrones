@@ -2,6 +2,7 @@ import * as actionTypes from "./actionTypes";
 import axios from "../axios";
 
 import characters from "./charaters";
+import houses from "./houses";
 
 export const setBooks = data => {
   return {
@@ -45,6 +46,35 @@ export const getMainCharacters = () => async dispatch => {
             )
           );
         }
+      });
+  });
+};
+
+export const setGreatHouses = data => {
+  return {
+    type: actionTypes.SET_GREAT_HOUSES,
+    great: data[0]
+  };
+};
+
+export const getGreatHouses = () => async dispatch => {
+  // console.log(characters);
+  houses.forEach(h => {
+    axios
+      .get(`houses?name=${h}`)
+      .then(response => response.data)
+      .then(d => {
+        dispatch(setGreatHouses(d));
+        // if (d.length === 1) {
+        // } else if (d.length > 1) {
+        //   dispatch(
+        //     setGreatHouses(
+        //       d.filter(f => {
+        //         return f["playedBy"][0] !== "";
+        //       })
+        //     )
+        //   );
+        // }
       });
   });
 };

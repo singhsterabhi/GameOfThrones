@@ -1,5 +1,5 @@
 .Navigation {
-  height: 3rem;
+  height: 3em;
   display: flex;
   justify-content: space-between;
   padding: 0px 20px;
@@ -20,5 +20,9 @@
   li {
     list-style: none;
     margin-right: 20px;
+
+    a {
+      color: #2196f3;
+    }
   }
 }

@@ -14,14 +14,15 @@ $color-ice: linear-gradient(45deg, #2196f3 30%, #21cbf3 90%);
   -webkit-text-fill-color: transparent;
 }
 
-.Books {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
+.Houses {
+  width: 100%;
+  column-width: 250px;
+  column-gap: 1em;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.Book {
+.House {
   background-image: radial-gradient(73% 147%, #ffffff 59%, #ebdedb 100%),
     radial-gradient(
       91% 146%,
@@ -29,25 +30,40 @@ $color-ice: linear-gradient(45deg, #2196f3 30%, #21cbf3 90%);
       rgba(0, 0, 0, 0.5) 100%
     );
   background-blend-mode: screen;
+  display: inline-block;
+  width: 250px;
   padding: 1em;
-  width: 200px;
+  margin: 0.5em;
   box-shadow: 0px 1px 5px #aaa;
   border-radius: 5px;
-  margin: 20px 20px;
   cursor: pointer;
+
+  h3 {
+    text-decoration: underline;
+    font-size: 1.5em;
+    margin: 0.75em;
+  }
+
+  & > div {
+    text-align: left;
+    padding: 5px 10px;
+    text-align: justify;
+    text-justify: auto;
+  }
 
   &:hover {
     box-shadow: 0px 3px 8px #888;
   }
+}
 
-  img {
-    height: 15em;
-    width: 10em;
-    border: 1px solid #e1ffcd;
-    border-radius: 5px;
-  }
+.Head {
+  font-weight: bold;
+}
 
-  h3 a {
-    color: #2196f3;
-  }
+.PlayedBy {
+  color: #2196f3;
+}
+
+.ReadMore {
+  color: #f04444;
 }

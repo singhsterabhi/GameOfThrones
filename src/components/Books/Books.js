@@ -29,7 +29,14 @@ class Books extends Component {
                 this.src = defaultImg;
               }}
             />
-            <h3>{m.name}</h3>
+            <h3>
+              <a
+                href={`https://www.google.com/search?q=${m.name} book`}
+                target="_blank"
+                rel="noopener noreferrer">
+                {m.name}
+              </a>
+            </h3>
           </div>
         );
       });

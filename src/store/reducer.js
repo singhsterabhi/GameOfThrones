@@ -2,7 +2,8 @@ import * as actionTypes from "./actionTypes";
 
 const initialState = {
   books: null,
-  characters: []
+  characters: [],
+  houses: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -16,6 +17,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         characters: [...state.characters, action.main]
+      };
+    case actionTypes.SET_GREAT_HOUSES:
+      return {
+        ...state,
+        houses: [...state.houses, action.great]
       };
     default:
       return state;
