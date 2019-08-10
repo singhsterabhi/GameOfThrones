@@ -1,0 +1,24 @@
+.Navigation {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  box-shadow: 0px 2px 5px #bbb;
+}
+
+.Main {
+  height: 100%;
+  padding: 5px;
+  margin-left: 20px;
+  img {
+    height: 2.5em;
+  }
+}
+
+.Nav {
+  display: flex;
+  li {
+    list-style: none;
+    margin-right: 20px;
+  }
+}

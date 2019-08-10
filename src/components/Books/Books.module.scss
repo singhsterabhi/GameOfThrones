@@ -1,0 +1,42 @@
+$color-fire: linear-gradient(45deg, #f04444 30%, #ee9768 90%);
+$color-ice: linear-gradient(45deg, #2196f3 30%, #21cbf3 90%);
+
+.Container{
+    padding: 0 5em;
+}
+
+.Heading {
+  margin: 1em 0;
+  font-size: 3em;
+}
+
+.Books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.Book {
+  padding: 1em;
+  width: 200px;
+  box-shadow: 0px 1px 5px #aaa;
+  border-radius: 5px;
+  margin: 20px 20px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 3px 8px #888;
+  }
+
+  img {
+    height: 15em;
+    width: 10em;
+    border: 1px solid #e1ffcd;
+    border-radius: 5px;
+  }
+
+  h3 {
+    color: teal;
+  }
+}

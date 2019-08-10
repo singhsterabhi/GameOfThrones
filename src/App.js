@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import "./App.css";
+
+import Navigation from "./components/Navigation/Navigation";
+import Home from "./components/Home/Home";
+import Books from "./components/Books/Books";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Navigation />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/books" component={Books} />
+        </Switch>
+      </Router>
     </div>
   );
 }
 
 export default App;
+// linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)
+// linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)
