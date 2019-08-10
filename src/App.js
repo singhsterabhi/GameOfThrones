@@ -9,6 +9,7 @@ import Books from "./components/Books/Books";
 import Characters from "./components/Characters/Characters";
 import Houses from "./components/Houses/Houses";
 import Footer from "./components/Footer/Footer";
+import Error from "./components/404/404";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/books" component={Books} />
           <Route path="/characters" component={Characters} />
           <Route path="/houses" component={Houses} />
+          <Route path="" component={Error} />
         </Switch>
         <Footer />
       </Router>
