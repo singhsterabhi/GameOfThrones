@@ -11,7 +11,6 @@ class Books extends Component {
   state = {};
   componentDidMount() {
     if (!this.props.books) {
-      console.log("componentDidMount", this.props.books);
       this.props.getBooks();
     }
   }

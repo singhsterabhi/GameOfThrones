@@ -10,7 +10,6 @@ class Houses extends Component {
   state = {};
   componentDidMount() {
     if (!this.props.houses.length) {
-      console.log(this.props.houses);
       this.props.getGreatHouses();
     }
   }

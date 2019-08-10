@@ -10,7 +10,6 @@ class Characters extends Component {
   state = {};
   componentDidMount() {
     if (!this.props.characters.length) {
-      console.log(this.props.characters);
       this.props.getMainCharacters();
     }
   }

@@ -15,7 +15,6 @@ export const getBooks = () => async dispatch => {
   await axios
     .get("books")
     .then(response => {
-      console.log("action", response.data);
       dispatch(setBooks(response.data));
     })
     .catch(err => console.log(err));
@@ -29,7 +28,6 @@ export const setMainCharacters = data => {
 };
 
 export const getMainCharacters = () => async dispatch => {
-  // console.log(characters);
   characters.forEach(c => {
     axios
       .get(`characters?name=${c}`)
@@ -58,23 +56,12 @@ export const setGreatHouses = data => {
 };
 
 export const getGreatHouses = () => async dispatch => {
-  // console.log(characters);
   houses.forEach(h => {
     axios
       .get(`houses?name=${h}`)
       .then(response => response.data)
       .then(d => {
         dispatch(setGreatHouses(d));
-        // if (d.length === 1) {
-        // } else if (d.length > 1) {
-        //   dispatch(
-        //     setGreatHouses(
-        //       d.filter(f => {
-        //         return f["playedBy"][0] !== "";
-        //       })
-        //     )
-        //   );
-        // }
       });
   });
 };
