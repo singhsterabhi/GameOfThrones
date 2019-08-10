@@ -14,6 +14,7 @@ class Home extends Component {
       <div className={classes.Home}>
         <h1 className={classes.Heading}>Game of Thrones World Map</h1>
         <img
+          style={this.state.imageLoading ? { display: "none" } : {}}
           src={map}
           alt="Game of Thrones World Map"
           onLoad={() => this.setState({ imageLoading: false })}
